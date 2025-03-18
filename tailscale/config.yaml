@@ -41,7 +41,6 @@ schema:
   proxy_and_funnel_port: match(^(443|8443|10000)$)?
   proxy_and_funnel_port2: match(^(443|8443|10000)$)?
   proxy_and_funnel_port3: match(^(443|8443|10000)$)?
-  proxy_and_funnel_dest_port: int?
   proxy_and_funnel_dest_port2: int?
   proxy_and_funnel_dest_port3: int?
   snat_subnet_routes: bool?
