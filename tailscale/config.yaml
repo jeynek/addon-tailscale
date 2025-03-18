@@ -39,6 +39,8 @@ schema:
   login_server: url?
   proxy: bool?
   proxy_and_funnel_port: match(^(443|8443|10000)$)?
+  proxy_and_funnel_port2: match(^(443|8443|10000)$)?
+  proxy_and_funnel_port3: match(^(443|8443|10000)$)?
   snat_subnet_routes: bool?
   stateful_filtering: bool?
   tags:
