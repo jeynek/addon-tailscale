@@ -64,6 +64,29 @@ configuration:
       This option allows you to configure the port the Tailscale Proxy and Funnel
       features are accessible on.
       Only port number 443, 8443 and 10000 is allowed by Tailscale.
+  proxy_and_funnel_port2:
+    name: Second Tailscale Proxy and Funnel 2nd port
+    description: >-
+      This option allows you to configure a second port the Tailscale Proxy and Funnel
+      features are accessible on.
+      Only port number 443, 8443 and 10000 is allowed by Tailscale.
+  proxy_and_funnel_port3:
+    name: Tailscale Proxy and Funnel 3rd port
+    description: >-
+      This option allows you to configure a third port the Tailscale Proxy and Funnel
+      features are accessible on.
+      Only port number 443, 8443 and 10000 is allowed by Tailscale.
+  proxy_and_funnel_dest_port2:
+    name: Second Tailscale Proxy and Funnel destination port 2
+    description: >-
+      This option allows you to configure wher the second port of the Tailscale Proxy and Funnel
+      should point at 127.0.0.1
+  proxy_and_funnel_dest_port3:
+    name: Tailscale Proxy and Funnel port destination port 3
+    description: >-
+      This option allows you to configure wher the third port of the Tailscale Proxy and Funnel
+      should point at 127.0.0.1
+
   snat_subnet_routes:
     name: Source NAT subnet routes
     description: >-
