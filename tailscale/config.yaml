@@ -3,7 +3,7 @@ name: Tailscale
 options:
   proxy_and_funnel_custom_path_2: "/"
   proxy_and_funnel_custom_path_3: "/"
-version: 0.29.1
+version: 0.29.0
 slug: tailscale
 description: Zero config VPN for building secure networks
 url: https://github.com/jeynek/addon-tailscale
