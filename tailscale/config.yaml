@@ -1,6 +1,6 @@
 ---
 name: Tailscale
-version: 0.28.0
+version: 0.29.0
 slug: tailscale
 description: Zero config VPN for building secure networks
 url: https://github.com/jeynek/addon-tailscale
