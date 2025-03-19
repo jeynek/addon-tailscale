@@ -1,5 +1,8 @@
 ---
 name: Tailscale
+options:
+  proxy_and_funnel_custom_path_2: "/"
+  proxy_and_funnel_custom_path_3: "/"
 version: 0.29.0
 slug: tailscale
 description: Zero config VPN for building secure networks
@@ -43,6 +46,8 @@ schema:
   proxy_and_funnel_port3: match(^(443|8443|10000)$)?
   proxy_and_funnel_dest_port2: int?
   proxy_and_funnel_dest_port3: int?
+  proxy_and_funnel_custom_path_2: str?
+  proxy_and_funnel_custom_path_3: str?
   snat_subnet_routes: bool?
   stateful_filtering: bool?
   tags:
