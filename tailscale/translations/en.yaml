@@ -79,14 +79,23 @@ configuration:
   proxy_and_funnel_dest_port2:
     name: Second Tailscale Proxy and Funnel destination port 2
     description: >-
-      This option allows you to configure wher the second port of the Tailscale Proxy and Funnel
+      This option allows you to configure where the second port of the Tailscale Proxy and Funnel
       should point at 127.0.0.1
   proxy_and_funnel_dest_port3:
     name: Tailscale Proxy and Funnel port destination port 3
     description: >-
-      This option allows you to configure wher the third port of the Tailscale Proxy and Funnel
+      This option allows you to configure where the third port of the Tailscale Proxy and Funnel
       should point at 127.0.0.1
-
+  proxy_and_funnel_custom_path_2:
+    name: Second Tailscale Proxy and Funnel custom path 2
+    description: >-
+      This option allows you to configure from what path the second port of the Tailscale Proxy and Funnel
+      will point at 127.0.0.1
+  proxy_and_funnel_custom_path_3:
+    name: Tailscale Proxy and Funnel custom path 3
+    description: >-
+      This option allows you to configure from what path the second port of the Tailscale Proxy and Funnel
+      will point at 127.0.0.1
   snat_subnet_routes:
     name: Source NAT subnet routes
     description: >-
