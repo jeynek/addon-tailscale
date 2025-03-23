@@ -65,10 +65,10 @@ fi
 # Set up serve
 /opt/tailscale ${tailscale_command} --bg --https=$(bashio::config "proxy_and_funnel_port2") --set-path=$(bashio::config "proxy_and_funnel_custom_path_2") "http://127.0.0.1:$(bashio::config "proxy_and_funnel_dest_port2")"
 /opt/tailscale ${tailscale_command} --bg --https=$(bashio::config "proxy_and_funnel_port3") --set-path=$(bashio::config "proxy_and_funnel_custom_path_3") "http://127.0.0.1:$(bashio::config "proxy_and_funnel_dest_port3")"
-/usr/sbin/iptablesiptables -t nat -A PREROUTING -p tcp -d 192.168.0.191 --dport 443 -j DNAT --to 100.92.45.109
-/usr/sbin/iptablesiptables -A FORWARD -p tcp -d 100.92.45.109 --dport 443 -j ACCEPT
-/usr/sbin/iptablesiptables -t nat -A PREROUTING -p tcp -d 192.168.0.191 --dport $(bashio::config "proxy_and_funnel_port2") -j DNAT --to 100.92.45.109
-/usr/sbin/iptablesiptables -A FORWARD -p tcp -d 100.92.45.109 --dport $(bashio::config "proxy_and_funnel_port2") -j ACCEPT
-/usr/sbin/iptablesiptables -t nat -A PREROUTING -p tcp -d 192.168.0.191 --dport $(bashio::config "proxy_and_funnel_port3") -j DNAT --to 100.92.45.109
-/usr/sbin/iptablesiptables -A FORWARD -p tcp -d 100.92.45.109 --dport $(bashio::config "proxy_and_funnel_port3") -j ACCEPT
+/usr/sbin/iptables -t nat -A PREROUTING -p tcp -d 192.168.0.191 --dport 443 -j DNAT --to 100.92.45.109
+/usr/sbin/iptables -A FORWARD -p tcp -d 100.92.45.109 --dport 443 -j ACCEPT
+/usr/sbin/iptables -t nat -A PREROUTING -p tcp -d 192.168.0.191 --dport $(bashio::config "proxy_and_funnel_port2") -j DNAT --to 100.92.45.109
+/usr/sbin/iptables -A FORWARD -p tcp -d 100.92.45.109 --dport $(bashio::config "proxy_and_funnel_port2") -j ACCEPT
+/usr/sbin/iptables -t nat -A PREROUTING -p tcp -d 192.168.0.191 --dport $(bashio::config "proxy_and_funnel_port3") -j DNAT --to 100.92.45.109
+/usr/sbin/iptables -A FORWARD -p tcp -d 100.92.45.109 --dport $(bashio::config "proxy_and_funnel_port3") -j ACCEPT
 exec /opt/tailscale ${tailscale_command} --https=$(bashio::config "proxy_and_funnel_port" "443") --set-path=/ "http://127.0.0.1:$(bashio::core.port)"
